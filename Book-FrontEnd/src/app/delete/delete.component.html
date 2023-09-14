@@ -1,1 +1,11 @@
-<p>delete works!</p>
+<div class="container">
+    <div>
+        <H3>{{data.id}}</H3>
+        <h4>{{data.name}}</h4>
+        <h4>{{data.type}}</h4>
+        <h4>{{data.desc}}</h4>
+        <h4>{{data.page}}</h4>
+        <h4>{{data.price|currency:"INR"}}</h4>
+    </div>
+    <button class="btn btn-primary" (click)="deletedata()">Delete</button>
+</div>

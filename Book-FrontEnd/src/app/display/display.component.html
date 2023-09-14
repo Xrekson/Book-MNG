@@ -1,1 +1,30 @@
-<p>display works!</p>
+<div class="container">
+    <h2>Book Catalog</h2>
+    <button class="btn btn-primary"><a [routerLink]="['/add']" style="color: aliceblue;">ADD Books</a></button>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Genre</th>
+                <th>Description</th>
+                <th>Pages</th>
+                <th>Price</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let x of datalist">
+                <td>{{x.id}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.type}}</td>
+                <td>{{x.description}}</td>
+                <td>{{x.page}}</td>
+                <td>{{x.price|currency:"INR"}}</td>
+                <td><a [routerLink]="[ '/update',x.id]">Update</a></td>
+                <td><a [routerLink]="[ '/delete',x.id]">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

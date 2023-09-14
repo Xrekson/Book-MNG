@@ -7,7 +7,8 @@ import { AddComponent } from './add/add.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 import { DisplayComponent } from './display/display.component';
-import { Router,RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,8 @@ import { Router,RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

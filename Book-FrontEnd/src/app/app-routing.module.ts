@@ -6,10 +6,10 @@ import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 
 const routes: Routes = [
-  { path: '/add', component: AddComponent },
-  { path: '/display', component: DisplayComponent },
-  { path: '/update', component: UpdateComponent },
-  { path: '/delete', component: DeleteComponent },
+  { path: 'add', component: AddComponent },
+  { path: 'display', component: DisplayComponent },
+  { path: 'update/:id', component: UpdateComponent },
+  { path: 'delete/:id', component: DeleteComponent },
 ];
 
 @NgModule({

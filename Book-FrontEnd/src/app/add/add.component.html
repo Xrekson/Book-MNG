@@ -1,1 +1,35 @@
-<p>add works!</p>
+
+<div class="container">
+    <h3>Add Books</h3>
+    <form [formGroup]="data">
+        <div class="form-group">
+            <label for="first-name">Name: </label>
+            <input id="first-name" class="form-control" type="text" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label for="last-name">Description: </label>
+            <input id="last-name" class="form-control" type="text" formControlName="desc">
+        </div>
+        <div class="form-group">
+            <label for="type">Type: </label>
+            <select name="type" id="type" class="form-control" formControlName="type">
+                <option value="Fiction">Fiction</option>
+                <option value="Sci-Fic">Science-Fiction</option>
+                <option value="Mystrey">Mystery</option>
+                <option value="Act&Adv">Action and Adventure</option>
+                <option value="Detec">Detective</option>
+                <option value="Language">Programing</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="last-name">Page No: </label>
+            <input id="last-name" class="form-control" type="number" formControlName="page">
+        </div>
+        <div class="form-group">
+            <label for="last-name">Price: </label>
+            <input id="last-name" class="form-control" type="number" formControlName="price">
+        </div>
+        <button (click)="savdata()">Save</button>
+      </form>
+      <a href="/display">See book</a>
+</div>

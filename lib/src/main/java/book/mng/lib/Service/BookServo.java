@@ -39,6 +39,9 @@ public class BookServo {
     public List<Book> getNamebyBooks(String name){
         return repo.findByNamereg(name);
     }
+    public Book getBookbyID(Integer id){
+        return repo.findById(id).get();
+    }
     public boolean deletedata(Integer id){
         Book data = repo.findById(id).get();
         if(data!=null){
