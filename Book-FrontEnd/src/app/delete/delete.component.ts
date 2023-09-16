@@ -25,6 +25,6 @@ export class DeleteComponent implements OnInit{
   }
   deletedata(){
     this.servo.deletedata(this.idnum);
-    this.riot.navigate(["/display"]).then(()=>window.location.reload);
+    this.riot.navigate(["../display"]);
   }
 }
