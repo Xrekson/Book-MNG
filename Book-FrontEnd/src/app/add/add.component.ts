@@ -31,6 +31,5 @@ export class AddComponent {
       bookdata.page=parseInt(jsondata.page);
       bookdata.price=parseInt(jsondata.price);
       this.servo.save(bookdata);
-      this.riot.navigate(["/display"]);
     }
 }

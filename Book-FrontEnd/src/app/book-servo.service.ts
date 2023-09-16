@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class BookServoService {
-  baseUrl:string = "http://localhost:4210/book";
+  baseUrl:string = "http://localhost:8080/lib-1.0.0/book";
   private book_list:Book[];
   constructor(private http:HttpClient) { this.book_list=[] }
   getList():Observable<Book> {
