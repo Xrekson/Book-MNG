@@ -1,1 +1,45 @@
-<router-outlet></router-outlet>
+<div class="flex flex-row flex-nowrap">
+  <nav class=" bg-gray-800 text-gray-200 transition-all duration-300 ease-in-out h-screen" [ngClass]="navState?'w-70':'w-18'">
+    <div class="flex items-center h-12 px-4" (click)="change()">
+      <i-tabler [name]="'menu-2'" [ngClass]="{navState:'me-2'}"></i-tabler>
+      <span class="text-nowrap font-bold" *ngIf="navState">{{title}}</span>
+    </div>
+    <br>
+    <ng-container *ngIf="!navState">
+      <div *ngFor=" let nav of navigationArray;"
+        class="mb-2 grid place-items-center"
+        [ngClass]="navState ? 'grid grid-cols-3':''"
+        (click)="navigate(nav.url)">
+          <i-tabler name="{{nav.icon}}"></i-tabler>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="navState">
+      <div *ngFor=" let nav of navigationArray;"
+        class="mb-2 w-auto "
+        [ngClass]="navState ? 'grid grid-cols-3':''"
+        (click)="navigate(nav.url)">
+        <i-tabler name="{{nav.icon}}" class="mx-auto"></i-tabler>
+        <span class="text-start text-nowrap">
+          {{nav.name}}
+        </span>
+      </div>
+    </ng-container>
+  </nav>
+  <div class="basis-full pt-4 min-h-screen">
+    <router-outlet></router-outlet>
+    <footer
+      class="sticky top-[100vh] bottom-0 left-0 z-20 w-full p-2 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© {{year}} <a href="https://github.com/Xrekson"
+          class="hover:underline">Xrekson</a>.
+      </span>
+      <ul class="flex flex-wrap items-center m-1 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+          <a href="/" class="hover:underline me-4 md:me-6">Home</a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</div>

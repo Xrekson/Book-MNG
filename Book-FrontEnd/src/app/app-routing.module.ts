@@ -6,6 +6,7 @@ import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'display', pathMatch:'full'},
   { path: 'add', component: AddComponent },
   { path: 'display', component: DisplayComponent },
   { path: 'update/:id', component: UpdateComponent },
@@ -13,7 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

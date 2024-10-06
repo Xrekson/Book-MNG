@@ -9,6 +9,7 @@ import { DeleteComponent } from './delete/delete.component';
 import { DisplayComponent } from './display/display.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { SharedModule } from 'src/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,10 @@ import {HttpClientModule} from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

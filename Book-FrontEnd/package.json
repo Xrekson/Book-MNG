@@ -19,8 +19,13 @@
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
     "@syncfusion/ej2-angular-navigations": "^22.2.11-ngcc",
+    "angular-tabler-icons": "2.40.0",
+    "autoprefixer": "^10.4.20",
+    "book-front-end": "file:",
     "bootstrap": "^5.3.1",
+    "postcss": "^8.4.47",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^3.4.13",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },

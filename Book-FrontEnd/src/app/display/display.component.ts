@@ -16,9 +16,11 @@ export class DisplayComponent implements OnInit{
      this.servo.getList().subscribe((data)=>{
       this.datalist=data;
     })
-  this.riot.navigate(["/display"]).then(()=>{
-    window.location.reload;
-  })
+  }
+  navigate(url:string){
+    this.riot.navigate([url]).catch((error)=>{
+      console.log(error);
+    })
   }
 ;
 
